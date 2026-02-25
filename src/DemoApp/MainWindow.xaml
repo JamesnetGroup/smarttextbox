@@ -1,0 +1,70 @@
+<Window x:Class="DemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:smart="clr-namespace:JamesSmartTextBox.UI.Units;assembly=JamesSmartTextBox"
+        xmlns:validators="clr-namespace:JamesSmartTextBox.Local.Validators;assembly=JamesSmartTextBox"
+        Title="SmartTextBox Demo"
+        Width="500"
+        Height="620"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+            <TextBlock Text="SmartTextBox Demo"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Foreground="#1E1E1E"
+                       Margin="0,0,0,24"/>
+
+            <smart:SmartTextBox Header="Required"
+                                Placeholder="This field is required..."
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:RequiredValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+
+            <smart:SmartTextBox Header="Email"
+                                Placeholder="user@example.com"
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:EmailValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+
+            <smart:SmartTextBox Header="Password"
+                                Placeholder="Min 8 chars, upper + lower + digit"
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:PasswordValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+
+            <smart:SmartTextBox Header="URL"
+                                Placeholder="https://example.com"
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:UrlValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+
+            <smart:SmartTextBox Header="Passport"
+                                Placeholder="e.g. AB1234567"
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:PassportValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+
+            <smart:SmartTextBox Header="Credit Card"
+                                Placeholder="Enter card number"
+                                Margin="0,0,0,16">
+                <smart:SmartTextBox.Validator>
+                    <validators:CreditCardValidator/>
+                </smart:SmartTextBox.Validator>
+            </smart:SmartTextBox>
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>
