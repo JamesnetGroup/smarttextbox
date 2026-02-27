@@ -4,7 +4,6 @@ A WPF custom TextBox control with built-in input validation, built with Claude O
 
 [![.NET](https://img.shields.io/badge/.NET-10-512BD4)](https://dotnet.microsoft.com/)
 [![WPF](https://img.shields.io/badge/WPF-CustomControl-blue)](https://github.com/dotnet/wpf)
-[![AI](https://img.shields.io/badge/AI-Claude%20Opus%204.6-orange)](https://claude.ai/)
 
 ## Overview
 
